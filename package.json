@@ -1,7 +1,7 @@
 {
   "name": "mailinabox",
   "version": "1.0.2",
-  "description": "A module to use the build-in mailinabox.email API.",
+  "description": "A module to use the built-in mailinabox.email API.",
   "main": "login.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
