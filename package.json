@@ -1,0 +1,22 @@
+{
+  "name": "mailinabox",
+  "version": "1.0.2",
+  "description": "A module to use the build-in mailinabox.email API.",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhafraDev/node-mailinabox.git"
+  },
+  "keywords": [
+    "mailinabox"
+  ],
+  "author": "Khafra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KhafraDev/node-mailinabox/issues"
+  },
+  "homepage": "https://github.com/KhafraDev/node-mailinabox#readme"
+}
