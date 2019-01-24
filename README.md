@@ -94,7 +94,11 @@ user.dns_remove(account, `domain_to_add.com`).then(res => {
 })
 ```
 
-
+### Helpful resources
+https://stackoverflow.com/a/33505249
+https://code.i-harness.com/en/q/1607248
+https://superuser.com/a/291456
+https://www.javascripture.com/FormData#
 
 
 
