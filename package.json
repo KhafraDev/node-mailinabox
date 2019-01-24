@@ -1,22 +1,50 @@
 {
-  "name": "mailinabox",
-  "version": "1.0.2",
-  "description": "A module to use the built-in mailinabox.email API.",
-  "main": "login.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "mailinabox",
+  "_id": "mailinabox@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-2MIdMRpS5TM8yFcutV0g+OAEaN6bjiQvTBvZwrHIeSUdB+Mj6N+YNuJ5aSRitUzjEdCPSM27oQNu0Y1m2fziDw==",
+  "_location": "/mailinabox",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "mailinabox",
+    "name": "mailinabox",
+    "escapedName": "mailinabox",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mailinabox/-/mailinabox-1.0.2.tgz",
+  "_shasum": "abb05a5c094e3a5ae5abda57f43bfc5aba7824b0",
+  "_spec": "mailinabox",
+  "_where": "C:\\Users\\khafr\\Downloads\\code",
+  "author": {
+    "name": "Khafra"
+  },
+  "bugs": {
+    "url": "https://github.com/KhafraDev/node-mailinabox/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A module to use the build-in mailinabox.email API.",
+  "homepage": "https://github.com/KhafraDev/node-mailinabox#readme",
+  "keywords": [
+    "mailinabox"
+  ],
+  "license": "MIT",
+  "main": "login.js",
+  "name": "mailinabox",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KhafraDev/node-mailinabox.git"
   },
-  "keywords": [
-    "mailinabox"
-  ],
-  "author": "Khafra",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/KhafraDev/node-mailinabox/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/KhafraDev/node-mailinabox#readme"
+  "version": "1.1.1"
 }

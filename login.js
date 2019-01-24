@@ -9,7 +9,15 @@ class acc {
 
 module.exports = {
     login: acc,
+
     add: require('./src/add.js'),
     remove: require('./src/remove.js'),
     list: require('./src/list.js'),
+
+    alias_list: require('./src/alias_list.js'),
+    alias_add: require('./src/alias_add.js'),
+    alias_remove: require('./src/alias_remove.js'),
+
+    dns_add: require('./src/dns_add.js'),
+    dns_remove: require('./src/dns_remove.js'),
 }
