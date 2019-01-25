@@ -3,7 +3,7 @@
 A simple package to communicate with the mailinabox API.
 The API is installed onto every instance of mailinabox.
 
-[mailinabox](https://mailinabox.email/)
+[mailinabox.email](https://mailinabox.email/)
 
 ### Installation
 ``npm i mailinabox``
@@ -12,28 +12,23 @@ The API is installed onto every instance of mailinabox.
 
 Create a new "user" (for authentication).
 ```javascript
-const user = require('mailinabox');
-const account = new user.login("admin@example.com", "password", "example.com");
-// console.log(account)
+const mail = require('mailinabox');
+const admin = new mail("ie@example.com", "my$password", "my.domain.com");
 ```
 
 ### List
 List *all* users on a box
 ```javascript
-user.list(account).then(res => {
-  console.log(res);
-  // will return a JSON object of all users, on all domains
-  console.log(res.find(e => e.domain == "example.com"));
-  // get all users on a single domain
-})
+admin.list().then(res => {
+    /* ... */
+}
 ```
 
 ### Add
 Create a new account
 ```javascript
-user.add(account, "new@example.com", "password123").then(res => {
-    console.log(res.status == 200 && res.statusText == "OK");
-    // v1.0.0 only returns status and statusText
+admin.add("new@example.com", "$password123").then(res => {
+    /* ... */
 })
 ```
 
@@ -41,36 +36,35 @@ user.add(account, "new@example.com", "password123").then(res => {
 Remove an account (be careful - it doesn't archive the user.)
 Almost indentical to adding a user, but it doesn't require a password.
 ```javascript
-user.remove(account, "khafra@example.com").then(res => {
-  console.log(res)
-  // returns the same results as add
+admin.remove("new@example.com").then(res => {
+    /* ... */
 })
 ```
 
 ## Aliases!
 
+### List aliases
+List all existing aliases
+```javascript
+admin.alias_list().then(res => {
+    /* ... */
+})
+```
+
 ### Add
 Add an alias
-format: account object -> email -> email to forward mail to
+Parameters: account to forward from, account to forward to.
 ```javascript
-user.alias_add(account, `spam@example.com`, `admin@example.com`).then(res => {
-    console.log(res)
+admin.alias_add('from@example.com', 'forward_to@example.com').then(res => {
+    /* ... */
 })
 ```
 
 ### Remove
 Remove an alias
 ```javascript
-user.alias_remove(account, `spam@example.com`).then(res => {
-    console.log(res)
-})
-```
-
-### List aliases
-List all existing aliases
-```javascript
-user.alias_list(account).then(res => {
-    console.log(res.find(dm => dm.domain == "example.com"));
+admin.alias_remove('from@example.com').then(res => {
+    /* ... */
 })
 ```
 
@@ -79,26 +73,26 @@ user.alias_list(account).then(res => {
 ### Add
 Add a DNS record
 ```javascript
-user.dns_add(account, `domain_to_add.com`).then(res => {
-    console.log(res)
-    // will return "OK" status even if the record is already set
+admin.dns_add('other.example.com').then(res => {
+    /*
+        The API returns a successful status even if 
+        the DNS record has already been set!
+    */
 })
 ```
 
 ### Remove
 Remove a DNS record
 ```javascript
-user.dns_remove(account, `domain_to_add.com`).then(res => {
-    console.log(res)
-    // will return "OK" status even if the record is removed
+admin.dns_remove('other.example.com').then(res => {
+    /* 
+        The API returns a successful status even if 
+        the DNS record has already been removed!
+    */
 })
 ```
 
-### Helpful resources
-https://stackoverflow.com/a/33505249
-https://code.i-harness.com/en/q/1607248
-https://superuser.com/a/291456
-https://www.javascripture.com/FormData#
+
 
 
 

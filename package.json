@@ -1,8 +1,8 @@
 {
   "_from": "mailinabox",
-  "_id": "mailinabox@1.0.2",
+  "_id": "mailinabox@1.1.1",
   "_inBundle": false,
-  "_integrity": "sha512-2MIdMRpS5TM8yFcutV0g+OAEaN6bjiQvTBvZwrHIeSUdB+Mj6N+YNuJ5aSRitUzjEdCPSM27oQNu0Y1m2fziDw==",
+  "_integrity": "sha512-UiKmCrUKO4i2WbuRsns+wkRSiKA9GPZc1cvG5UtPRZ3b1a2zlLdLRJjTjsi3jvW5lshBU2pCOZ3mG0YC0GPKkw==",
   "_location": "/mailinabox",
   "_phantomChildren": {},
   "_requested": {
@@ -19,8 +19,8 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/mailinabox/-/mailinabox-1.0.2.tgz",
-  "_shasum": "abb05a5c094e3a5ae5abda57f43bfc5aba7824b0",
+  "_resolved": "https://registry.npmjs.org/mailinabox/-/mailinabox-1.1.1.tgz",
+  "_shasum": "36430c7656198a8a7262e5388e964c335ee636f5",
   "_spec": "mailinabox",
   "_where": "C:\\Users\\khafr\\Downloads\\code",
   "author": {
@@ -46,5 +46,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.1.1"
+  "version": "1.5.0"
 }
