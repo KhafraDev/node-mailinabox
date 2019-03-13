@@ -11,86 +11,71 @@ The API is installed onto every instance of mailinabox.
 ## Basic Use
 
 Create a new "user" (for authentication).
+Remember, don't load your credentials from /var/www/html/ or bad things may occur.
 ```javascript
-const mail = require('mailinabox');
-const admin = new mail("ie@example.com", "my$password", "my.domain.com");
+const mailinabox = require('mailinabox');
+const mail = new mailinabox({ email: "test@example.com", password: "password", domain: "example.com"});
+// or
+const mail = new mailinabox({ domain: 'example.com', b64: `base64 string of 'email:password'` });
 ```
 
 ### List
 List *all* users on a box
 ```javascript
-admin.list().then(res => {
-    /* ... */
-}
+mail.list().then(console.log);
 ```
 
-### Add
+### Add Account
 Create a new account
 ```javascript
-admin.add("new@example.com", "$password123").then(res => {
-    /* ... */
-})
+mail.addAccount("new@example.com", "password").then(console.log);
 ```
 
-### Remove
-Remove an account (be careful - it doesn't archive the user.)
+### Remove Account
+Remove an account (not archived).
 Almost indentical to adding a user, but it doesn't require a password.
 ```javascript
-admin.remove("new@example.com").then(res => {
-    /* ... */
-})
+mail.removeAccount("new@example.com").then(console.log);
 ```
 
-## Aliases!
-
-### List aliases
+### List Aliases
 List all existing aliases
 ```javascript
-admin.alias_list().then(res => {
-    /* ... */
-})
+mail.listAlias().then(console.log);
 ```
 
-### Add
+### Add Alias
 Add an alias
 Parameters: account to forward from, account to forward to.
 ```javascript
-admin.alias_add('from@example.com', 'forward_to@example.com').then(res => {
-    /* ... */
-})
+mail.addAlias('from@example.com', 'forward_to@example.com').then(console.log);
 ```
 
-### Remove
+### Remove Alias
 Remove an alias
 ```javascript
-admin.alias_remove('from@example.com').then(res => {
-    /* ... */
-})
+mail.removeAlias('from@example.com').then(console.log);
 ```
 
-## DNS (in progress - version 1.1.0)
-
-### Add
+### Add DNS
 Add a DNS record
 ```javascript
-admin.dns_add('other.example.com').then(res => {
-    /*
-        The API returns a successful status even if 
-        the DNS record has already been set!
-    */
-})
+mail.addDNS('google.com').then(console.log);
+    /*  The API returns a successful status even if 
+        the DNS record has already been set!  */
 ```
 
-### Remove
+### Remove DNS
 Remove a DNS record
 ```javascript
-admin.dns_remove('other.example.com').then(res => {
-    /* 
-        The API returns a successful status even if 
-        the DNS record has already been removed!
-    */
-})
+mail.removeDNS('google.com').then(console.log);
+    /*  The API returns a successful status even if 
+            the DNS record has already been removed!  */
 ```
+
+### Tips
+I recommend using a form of caching if you're using this, it can significantly increase speed and performance of your app!
+My recommendartion: memory-cache
 
 
 
