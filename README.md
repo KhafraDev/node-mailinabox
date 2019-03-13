@@ -1,7 +1,10 @@
 ![mailinabox](https://mailinabox.email/static/logo.png)
 
 A simple package to communicate with the mailinabox API.
+
 The API is installed onto every instance of mailinabox.
+
+This can be used for an account creation form or other methods not yet available to mailinabox.
 
 [mailinabox.email](https://mailinabox.email/)
 
@@ -75,7 +78,7 @@ mail.removeDNS('google.com').then(console.log);
 
 ### Tips
 I recommend using a form of caching if you're using this, it can significantly increase speed and performance of your app!
-My recommendartion: memory-cache
+My recommendation: memory-cache
 
 
 
